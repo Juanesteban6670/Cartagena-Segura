@@ -66,14 +66,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-body {
-  background-color: #1e1e1e; /* Fondo oscuro */
-  color: white; /* Texto blanco */
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
