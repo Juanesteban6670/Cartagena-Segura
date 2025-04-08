@@ -16,13 +16,16 @@ function ReporteForm() {
       return;
     }
 
+    const usuario = localStorage.getItem("usuario"); // 👈 obtenemos el usuario
+
     const nuevoReporte = {
       descripcion,
       tipo,
       estado: "Pendiente",
       fecha: new Date().toISOString(),
       latitud: ubicacion.lat,
-      longitud: ubicacion.lng
+      longitud: ubicacion.lng,
+      usuario, // 👈 lo agregamos al reporte
     };
 
     try {
