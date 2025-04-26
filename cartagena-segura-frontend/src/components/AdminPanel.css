@@ -1,0 +1,89 @@
+.admin-panel-container {
+    background: #0d0d0d;
+    color: #39ff14;
+    padding: 1rem 2rem;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .titulo-neon {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #39ff14;
+    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+    margin-bottom: 1rem;
+  }
+  
+  .panel-content {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+    min-height: 0;
+  }
+  
+  .mapa-container {
+    flex: 7;
+    height: 100%;
+    border: 2px solid #39ff14;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .lista-reportes {
+    flex: 3;
+    background: #1a1a1a;
+    border: 2px solid #39ff14;
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .lista-reportes h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #39ff14;
+    text-shadow: 0 0 3px #39ff14;
+  }
+  
+  .scroll-area {
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 5px;
+  }
+  
+  .reporte-item {
+    background: #111;
+    border: 1px solid #39ff14;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  
+  .reporte-item p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .reporte-item button {
+    background: transparent;
+    border: 1px solid #39ff14;
+    color: #39ff14;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 0.5rem;
+  }
+  
+  .reporte-item button:hover {
+    background: #39ff14;
+    color: #000;
+  }
+  
