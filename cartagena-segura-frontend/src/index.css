@@ -1,0 +1,160 @@
+/* Variables por defecto (modo claro) */
+:root {
+  --color-bg: #f4f6f9;
+  --color-text: #333;
+  --color-header: #2c3e50;
+  --color-form: #ffffffcc;
+  --color-card: #ffffffdd;
+  --color-primary: #007bff;
+  --color-primary-hover: #0056b3;
+  --color-danger: #dc3545;
+  --color-pattern: rgba(0, 0, 0, 0.03);
+}
+
+/* Variables para modo oscuro */
+body.dark-mode {
+  --color-bg: #1e1e1e;
+  --color-text: #f5f5f5;
+  --color-header: #f5f5f5;
+  --color-form: #2c2c2ccc;
+  --color-card: #2c2c2cdd;
+  --color-primary: #0d6efd;
+  --color-primary-hover: #0a58ca;
+  --color-danger: #f44336;
+  --color-pattern: rgba(255, 255, 255, 0.02);
+}
+
+/* Fondo general con patrón */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg);
+  background-image:
+    linear-gradient(45deg, var(--color-pattern) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--color-pattern) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--color-pattern) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--color-pattern) 75%);
+  background-size: 40px 40px;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Contenedor general */
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+  color: var(--color-header);
+  margin-bottom: 1rem;
+}
+
+/* Formularios */
+form {
+  background-color: var(--color-form);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  backdrop-filter: blur(5px);
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.form-control,
+.form-select {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+/* Botones */
+button, .btn {
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-outline-danger {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--color-danger);
+  color: white;
+}
+
+/* Tarjetas de reporte */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background-color: var(--color-card);
+  backdrop-filter: blur(5px);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.card-text {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+/* Select de estado */
+select.form-select {
+  margin-top: 0.5rem;
+}
+
+/* Mapa u otros contenedores responsivos */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+}
